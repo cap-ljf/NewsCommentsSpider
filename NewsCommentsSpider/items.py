@@ -2,9 +2,7 @@
 
 
 import scrapy
-from datetime import datetime
 from scrapy import Field
-
 
 class CommentItem(scrapy.Item):
     # 文章链接

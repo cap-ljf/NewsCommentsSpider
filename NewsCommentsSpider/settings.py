@@ -25,12 +25,16 @@ DOWNLOAD_DELAY = 2  # 每个下载请求之间间隔两秒
 
 
 # redis配置
+# 使用scrapy-redis里的调度器组件，不使用默认的调度器
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# 允许暂停，redis请求记录不丢失
 SCHEDULER_PERSIST = True
+# 使用scrapy-redis里的去重组件，不使用scrapy默认的去重方式
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# 连接Redis配置
 REDIS_HOST = 'localhost'
 REDIS_PORT = '6379'
-REDIS_DB = 0
+REDIS_DB = 0 # 指定db为0
 REDIS_PASSWD = ''
 
 # mysql配置

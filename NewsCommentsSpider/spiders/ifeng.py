@@ -6,12 +6,10 @@
 """
 import json
 import re
-
 import time
 import urllib.parse
 
 from scrapy_redis.spiders import RedisSpider
-from bs4 import BeautifulSoup
 
 from NewsCommentsSpider.items import CommentItem
 
